@@ -1,1 +1,306 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio Eric Saez Tejero</title>
+  <!-- Fuentes de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Ejemplo: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Importa Font Awesome para los iconos -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    /* RESET BÀSIC */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #0a0a0a;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+    /* NAVBAR */
+    .navbar {
+      background: #111;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 2px solid #0ff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar a {
+      color: #0ff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+    .navbar a:hover {
+      color: #fff;
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+    }
+    /* HEADER - Foto de perfil y redes sociales */
+    header {
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+    }
+    .profile-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #0ff;
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+    .profile-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .profile-info h1 {
+      font-size: 2.5rem;
+      color: #0ff;
+      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+      margin-bottom: 10px;
+    }
+    .profile-info p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      line-height: 1.6;
+    }
+    /* Redes Sociales */
+    .social-media {
+      margin-top: 20px;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+    }
+    .social-media a {
+      color: #0ff;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: transform 0.3s, color 0.3s;
+    }
+    .social-media a:hover {
+      color: #fff;
+      transform: scale(1.1);
+      text-shadow: 0 0 5px #fff;
+    }
+    /* SECCIONS PRINCIPALS */
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 2px solid #0ff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #0ff;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    section:hover {
+      transform: scale(1.01);
+      box-shadow: 0 0 20px #0ff;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #0ff;
+      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+      text-transform: uppercase;
+    }
+    section p {
+      margin-bottom: 1em;
+      line-height: 1.6;
+      text-align: justify;
+    }
+    /* Experiència Laboral */
+    .experiencia-item {
+      margin-bottom: 20px;
+    }
+    .experiencia-item h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #0ff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .experiencia-item h3 span {
+      font-size: 1rem;
+      color: #fff;
+      opacity: 0.8;
+    }
+    .experiencia-item ul {
+      list-style: none;
+      margin-left: 20px;
+    }
+    .experiencia-item ul li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+    }
+    .experiencia-item ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #0ff;
+    }
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      border-top: 2px solid #0ff;
+    }
+    footer p {
+      margin-bottom: 10px;
+      text-shadow: 0 0 5px #0ff;
+    }
+    /* Efecte de fons neón (opcional) */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(0,255,255,0.05),
+        rgba(0,255,255,0.05) 10px,
+        transparent 10px,
+        transparent 20px
+      );
+      pointer-events: none;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="#sobre-mi">Sobre mi</a>
+    <a href="#educacio">Educació</a>
+    <a href="#experiencia">Experiència Laboral</a>
+    <a href="#contacte">Contacte</a>
+  </nav>
+
+  <!-- HEADER con foto de perfil y redes sociales -->
+  <header>
+    <div class="profile-container">
+      <div class="profile-img">
+        <!-- Sustituye 'ruta-de-la-imagen.jpg' por la ruta de tu imagen de perfil -->
+        <img src="fotodni.jpg" alt="Foto de Eric">
+      </div>
+      <div class="profile-info">
+        <h1>Eric Saez Tejero</h1>
+        <p>Tècnic en Sistemes Microinformàtics i Xarxes | Estudiant de DAW</p>
+      </div>
+    </div>
+    <!-- Enlaces a redes sociales: Twitter, Instagram y GitHub -->
+
+  </header>
+
+  <!-- SECCIÓN: SOBRE MÍ -->
+  <section id="sobre-mi">
+    <h2>Sobre mi</h2>
+    <p>
+      Hola, em dic <strong>Eric Saez Tejero</strong>, tinc 20 anys i estudio informàtica perquè sempre m'ha interessat i crec que em pot brindar moltes oportunitats laborals en el futur. Després de sortir de l'institut Vilagran a Salt, vaig tenir clar que volia fer informàtica. Vaig decidir anar a l'institut Salvador Espriu també a Salt per estudiar un grau mitjà de SMX (Sistemes microinformàtics i xarxes) durant dos anys.
+    </p>
+    <p>
+      Una vegada acabat el grau mitjà, vaig decidir centrar-me en el desenvolupament web (DAW) per les oportunitats laborals que ofereix. Actualment estudio DAW a l'institut Montilivi de Girona i tinc la intenció de fer un dual en el segon any per entrar directament al sector laboral.
+    </p>
+  </section>
+
+  <!-- SECCIÓN: EDUCACIÓN -->
+  <section id="educacio">
+    <h2>Educació</h2>
+    <p>
+      He cursat el grau mitjà de SMX a l'institut Salvador Espriu de Salt i actualment estic cursant DAW a l'institut Montilivi de Girona.
+    </p>
+    <p>
+      Domini suficient de l'anglès amb el First Certificate i una passió per aprendre nous conceptes.
+    </p>
+  </section>
+
+  <!-- SECCIÓN: EXPERIENCIA LABORAL -->
+  <section id="experiencia">
+    <h2>Experiència Laboral</h2>
+    <p>
+      Tinc experiència en la creació de webs i màquines virtuals. Actualment estic millorant el meu nivell de 
+      <strong>C#</strong>, <strong>SQL</strong>, <strong>HTML</strong>, <strong>CSS</strong> i <strong>XML</strong>.
+    </p>
+    <!-- FCT - Aceena -->
+    <div class="experiencia-item">
+      <h3>FCT - (Formació en Centres de Treball) Aceena <span>12/2022 - 05/2023</span></h3>
+      <ul>
+        <li>Reparació i manteniment d'equips informàtics</li>
+        <li>Instal·lació de sistemes operatius</li>
+        <li>Disseny d'anuncis i posts</li>
+        <li>Gestió de pàgines web</li>
+        <li>Gestió d'arxius i informació de l'empresa</li>
+      </ul>
+    </div>
+    <!-- Logisfashion -->
+    <div class="experiencia-item">
+      <h3>Logisfashion <span>06/2023 - 09/2023</span></h3>
+      <ul>
+        <li>Transport de palets i caixes</li>
+      </ul>
+    </div>
+    <!-- Maillol Solar -->
+    <div class="experiencia-item">
+      <h3>Maillol Solar <span>10/2024 - ...</span></h3>
+      <ul>
+        <li>Edició de blocs de sentències en llenguatges de marques per a interfícies d'aplicacions web</li>
+        <li>Consultes a bases de dades per recuperar resultats</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: CONTACTO -->
+  <section id="contacte">
+    <h2>Contacte</h2>
+    <p><strong>Adreça:</strong> Carrer Sant Romà 47</p>
+    <p>
+      <strong>Email:</strong>
+      <a style="color: #0ff;" href="mailto:saezeric37@gmail.com">saezeric37@gmail.com</a>
+    </p>
+    <p>
+      <strong>Telèfon:</strong>
+      <a style="color: #0ff;" href="tel:+34606171761">606 17 17 61</a>
+    </p>
+    <p>
+      També pots connectar amb mi a través de les xarxes socials:
+      <br>
+      <a style="color: #0ff;" href="#" title="LinkedIn">LinkedIn</a> |
+      <a style="color: #0ff;" href="#" title="GitHub">GitHub</a> |
+      <a style="color: #0ff;" href="#" title="Twitter">Twitter</a>
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Gràcies per la teva atenció, un cordial salut</p>
+    <p>28 de març de 2025</p>
+  </footer>
+
+</body>
+</html>
