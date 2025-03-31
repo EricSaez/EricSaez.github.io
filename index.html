@@ -84,7 +84,7 @@
       max-width: 800px;
       line-height: 1.6;
     }
-    /* Redes Sociales */
+    /* Redes Sociales en el header */
     .social-media {
       margin-top: 20px;
       display: flex;
@@ -124,6 +124,9 @@
       text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
       text-transform: uppercase;
     }
+    section h2 i {
+      margin-right: 10px;
+    }
     section p {
       margin-bottom: 1em;
       line-height: 1.6;
@@ -156,9 +159,16 @@
       margin-bottom: 8px;
     }
     .experiencia-item ul li::before {
-      content: "•";
+      content: "\f111";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
       position: absolute;
       left: 0;
+      color: #0ff;
+    }
+    /* CONTACTE: iconos en datos de contacto */
+    .contact-info i {
+      margin-right: 8px;
       color: #0ff;
     }
     /* FOOTER */
@@ -196,17 +206,15 @@
 
   <!-- NAVBAR -->
   <nav class="navbar">
-    <a href="#sobre-mi">Sobre mi</a>
-    <a href="#educacio">Educació</a>
-    <a href="#experiencia">Experiència Laboral</a>
-    <a href="#contacte">Contacte</a>
+    <a href="#sobre-mi"><i class="fas fa-user"></i> Sobre mi</a>
+    <a href="#educacio"><i class="fas fa-graduation-cap"></i> Educació</a>
+    <a href="#experiencia"><i class="fas fa-briefcase"></i> Experiència Laboral</a>
+    <a href="#contacte"><i class="fas fa-envelope"></i> Contacte</a>
   </nav>
 
-  <!-- HEADER con foto de perfil y redes sociales -->
   <header>
     <div class="profile-container">
       <div class="profile-img">
-        <!-- Sustituye 'ruta-de-la-imagen.jpg' por la ruta de tu imagen de perfil -->
         <img src="fotodni.jpg" alt="Foto de Eric">
       </div>
       <div class="profile-info">
@@ -214,13 +222,17 @@
         <p>Tècnic en Sistemes Microinformàtics i Xarxes | Estudiant de DAW</p>
       </div>
     </div>
-    <!-- Enlaces a redes sociales: Twitter, Instagram y GitHub -->
-
+    <!-- Redes Sociales en el header -->
+    <div class="social-media">
+      <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+    </div>
   </header>
 
   <!-- SECCIÓN: SOBRE MÍ -->
   <section id="sobre-mi">
-    <h2>Sobre mi</h2>
+    <h2><i class="fas fa-user"></i> Sobre mi</h2>
     <p>
       Hola, em dic <strong>Eric Saez Tejero</strong>, tinc 20 anys i estudio informàtica perquè sempre m'ha interessat i crec que em pot brindar moltes oportunitats laborals en el futur. Després de sortir de l'institut Vilagran a Salt, vaig tenir clar que volia fer informàtica. Vaig decidir anar a l'institut Salvador Espriu també a Salt per estudiar un grau mitjà de SMX (Sistemes microinformàtics i xarxes) durant dos anys.
     </p>
@@ -231,9 +243,9 @@
 
   <!-- SECCIÓN: EDUCACIÓN -->
   <section id="educacio">
-    <h2>Educació</h2>
+    <h2><i class="fas fa-graduation-cap"></i> Educació</h2>
     <p>
-      He cursat el grau mitjà de SMX a l'institut Salvador Espriu de Salt i actualment estic cursant DAW a l'institut Montilivi de Girona.
+      He cursat el grau mitjà de SMX a l'institut Salvador Espriu de Salt i actualment estic finalitzant DAW a l'institut Montilivi de Girona.
     </p>
     <p>
       Domini suficient de l'anglès amb el First Certificate i una passió per aprendre nous conceptes.
@@ -242,12 +254,11 @@
 
   <!-- SECCIÓN: EXPERIENCIA LABORAL -->
   <section id="experiencia">
-    <h2>Experiència Laboral</h2>
+    <h2><i class="fas fa-briefcase"></i> Experiència Laboral</h2>
     <p>
-      Tinc experiència en la creació de webs i màquines virtuals. Actualment estic millorant el meu nivell de 
-      <strong>C#</strong>, <strong>SQL</strong>, <strong>HTML</strong>, <strong>CSS</strong> i <strong>XML</strong>.
+      Tinc experiència en la creació de webs i màquines virtuals, també tinc cert domini amb els llengüatges: 
+      <strong>C#</strong>, <strong>SQL</strong>, <strong>HTML</strong>, <strong>CSS</strong> i <strong>PHP</strong>.
     </p>
-    <!-- FCT - Aceena -->
     <div class="experiencia-item">
       <h3>FCT - (Formació en Centres de Treball) Aceena <span>12/2022 - 05/2023</span></h3>
       <ul>
@@ -258,41 +269,32 @@
         <li>Gestió d'arxius i informació de l'empresa</li>
       </ul>
     </div>
-    <!-- Logisfashion -->
     <div class="experiencia-item">
       <h3>Logisfashion <span>06/2023 - 09/2023</span></h3>
       <ul>
         <li>Transport de palets i caixes</li>
       </ul>
     </div>
-    <!-- Maillol Solar -->
     <div class="experiencia-item">
-      <h3>Maillol Solar <span>10/2024 - ...</span></h3>
+      <h3>Mallol Solar <span>10/2024 - ...</span></h3>
       <ul>
-        <li>Edició de blocs de sentències en llenguatges de marques per a interfícies d'aplicacions web</li>
-        <li>Consultes a bases de dades per recuperar resultats</li>
+        <li>Edició de blocs de sentències en llenguatges de marques que formen total o parcialment la interfície d'aplicacions web.</li>
+        <li>Connexions amb bases de dades per executar consultes i recuperar els resultats.</li>
       </ul>
     </div>
   </section>
 
   <!-- SECCIÓN: CONTACTO -->
   <section id="contacte">
-    <h2>Contacte</h2>
-    <p><strong>Adreça:</strong> Carrer Sant Romà 47</p>
-    <p>
-      <strong>Email:</strong>
+    <h2><i class="fas fa-envelope"></i> Contacte</h2>
+    <p class="contact-info"><i class="fas fa-map-marker-alt"></i> <strong>Adreça:</strong> Carrer Sant Romà 47</p>
+    <p class="contact-info">
+      <i class="fas fa-envelope"></i> <strong>Email:</strong>
       <a style="color: #0ff;" href="mailto:saezeric37@gmail.com">saezeric37@gmail.com</a>
     </p>
-    <p>
-      <strong>Telèfon:</strong>
+    <p class="contact-info">
+      <i class="fas fa-phone"></i> <strong>Telèfon:</strong>
       <a style="color: #0ff;" href="tel:+34606171761">606 17 17 61</a>
-    </p>
-    <p>
-      També pots connectar amb mi a través de les xarxes socials:
-      <br>
-      <a style="color: #0ff;" href="#" title="LinkedIn">LinkedIn</a> |
-      <a style="color: #0ff;" href="#" title="GitHub">GitHub</a> |
-      <a style="color: #0ff;" href="#" title="Twitter">Twitter</a>
     </p>
   </section>
 
@@ -301,6 +303,36 @@
     <p>Gràcies per la teva atenció, un cordial salut</p>
     <p>28 de març de 2025</p>
   </footer>
+
+  <!-- Script para mostrar secciones al hacer clic -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Oculta todas las secciones excepto "sobre-mi"
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => {
+        if (section.id !== "sobre-mi") {
+          section.style.display = "none";
+        }
+      });
+      
+      // Añade evento a cada enlace de la navbar
+      const navLinks = document.querySelectorAll(".navbar a");
+      navLinks.forEach(link => {
+        link.addEventListener("click", function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href").substring(1);
+          // Oculta todas las secciones
+          sections.forEach(section => section.style.display = "none");
+          // Muestra la sección objetivo
+          const targetSection = document.getElementById(targetId);
+          if(targetSection) {
+            targetSection.style.display = "block";
+            targetSection.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
